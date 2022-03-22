@@ -1,0 +1,39 @@
+<div class="container mw-100 mt-5" id="main">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card border-0 rounded-3 shadow-lg" id="card-body">
+                <div class="card-body p-5" id="card">
+                    <div class="text-center">
+                        <div class="h3 fw-light p-3 mb-5" id="title">
+                            <h1>Login</h1>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" [formGroup]="user" (submit)="Login()">
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" formControlName="email" id="user" type="email" placeholder="Correo electrónico" required />
+                            <label for="user" id="label_user">Correo electrónico</label>
+
+                            <small id="error" class="form-text" 
+                                *ngIf="inputEmail">Email requerido</small>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" formControlName="password" id="pass" type="password" placeholder="Contraseña" required />
+                            <label for="pass" id="label_pass">Contraseña</label>
+
+                            <small id="error" class="form-text" 
+                                *ngIf="inputPassword">Contraseña requerida</small>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Ingresar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

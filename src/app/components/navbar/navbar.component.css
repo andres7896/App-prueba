@@ -1,0 +1,14 @@
+.nav-link {
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.nav-link:hover {
+    transition: all ease 0.5s;
+    opacity: 0.4;
+}
+
+#username {
+    border: none;
+    background-color: #f8f9fa;
+}
